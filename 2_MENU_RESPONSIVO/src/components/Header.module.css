@@ -1,0 +1,29 @@
+/* o MODULE faz com que ele fique exclusivamente vinculado ao arquivo em que o css será importado */
+
+.menu_logo{
+    border: 1px solid #AAA;
+    display: flex;
+    justify-content: space-between;
+    height: 4rem;
+    align-items: center;
+    padding-inline: 1rem;
+}
+
+.opcoes{
+    border: 1px solid #CCC;
+    width: 10rem;
+    padding-block: 1rem;
+
+    translate: -100%; /* faz o menu desaparecer */
+}
+
+.opcoes nav{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+
+.opcoes.open{
+    translate: 0;
+}
