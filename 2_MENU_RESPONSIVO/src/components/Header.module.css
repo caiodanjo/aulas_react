@@ -1,5 +1,22 @@
 /* o MODULE faz com que ele fique exclusivamente vinculado ao arquivo em que o css será importado */
 
+.desktop{
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border: 1px solid #AAA;
+}
+
+.mobile{
+    position: relative;
+}
+
+.desktop_options{
+    display: flex;
+    gap: 2rem;
+}
+
 .menu_logo{
     border: 1px solid #AAA;
     display: flex;
@@ -7,23 +24,39 @@
     height: 4rem;
     align-items: center;
     padding-inline: 1rem;
+    margin-bottom: 1rem;
 }
 
-.opcoes{
+.options{
     border: 1px solid #CCC;
     width: 10rem;
     padding-block: 1rem;
+    position: absolute;
+    background-color: white;
+    top: 4.5625rem;
 
     translate: -100%; /* faz o menu desaparecer */
+
+    transition: translate .3s; /* transição de 3 segundos pra abrir */
 }
 
-.opcoes nav{
+.options nav{
     display: flex;
     flex-direction: column;
     gap: 1rem;
     align-items: center;
 }
 
-.opcoes.open{
+.options.open{
     translate: 0;
+}
+
+@media (min-width: 800px){
+    .mobile{
+        display: none;
+    }
+
+    .desktop{
+        display: flex;
+    }
 }
